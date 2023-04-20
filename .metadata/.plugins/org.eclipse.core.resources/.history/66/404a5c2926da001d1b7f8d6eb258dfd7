@@ -1,0 +1,15 @@
+package exeptions;
+
+public class teste1 {
+
+	public static void main(String[] args) {
+
+		int i = 1;
+		int j = 2;
+		
+		int soma = i + j;
+		
+		System.out.println(soma);
+	}
+
+}

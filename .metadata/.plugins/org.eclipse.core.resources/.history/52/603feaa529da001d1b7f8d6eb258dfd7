@@ -1,0 +1,12 @@
+package exeptions;
+
+public class Stack_trace {
+
+	public static void main(String[] args) {
+
+	}
+
+	public static void method2() {
+
+	}
+}

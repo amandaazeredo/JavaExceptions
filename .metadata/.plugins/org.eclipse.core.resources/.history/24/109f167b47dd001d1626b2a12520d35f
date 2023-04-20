@@ -1,0 +1,45 @@
+package entities;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+public class Reservation {
+
+	private String bookName;
+	private Date pickUpDate;
+	private Date returnDate;
+	
+	public Reservation(String bookName, Date pickUpDate, Date returnDate) {
+		this.bookName = bookName;
+		this.pickUpDate = pickUpDate;
+		this.returnDate = returnDate;
+	}
+	
+	public String getBookName() {
+		return bookName;
+	}
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+	public Date getPickUpDate() {
+		return pickUpDate;
+	}
+	public Date getReturnDate() {
+		return returnDate;
+	}
+	
+	public long duration() {
+		long diff = returnDate.getTime() - pickUpDate.getTime();
+		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+	}
+	
+	public void updateDates(Date pickUpDate, Date returnDate) {
+		this.pickUpDate = pickUpDate;
+		this.returnDate = returnDate;
+	}
+	
+	@Override
+	public String toString() {
+		return return "Book Name: " + bookName
+	}
+}
